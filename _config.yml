@@ -1,0 +1,10 @@
+# Site settings
+title: Oops!
+email: yxj0207@gmail.com
+description: Just another kernel noob's blog.
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://llseek.com"
+github_username: llseek
+
+# Build settings
+markdown: kramdown
