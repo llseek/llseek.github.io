@@ -6,9 +6,9 @@ date:	2015-01-21
 
 ###Shell built-in time
 
-We often use 'time' command to measure the executing time of a program. It will print program's 'real', 'user' and 'sys' time respectively.
+We often use __time__ command to measure the executing time of a program. It will print program's __real__, __user__ and __sys__ time respectively.
 
-However, our commonly used 'time' is just a shell (bash, zsh) build-in command like 'cd', 'pwd' and etc. In some use cases, information it delivers is too few to meet our needs.
+However, our commonly used 'time' is just a shell (bash, zsh) built-in command (same kind as 'cd', 'pwd' and etc). In some use cases, information it delivers is too few to satisfy our needs.
 
 {% highlight bash %}
 $ time tar zcf linux-stable.tar.gz linux-stable
@@ -20,7 +20,7 @@ sys	0m11.556s
 
 ###GNU time
 
-Here, I'd like to introduce another rarely used, but quite useful 'time' command - GNU time. This command is usually located under /usr/bin in most Linux distributions. Other than what shell built-in 'time' can show, GNU time prints more verbose system information like CPU usage, page fault, context switch and etc.
+Here, we will turn to another rarely used, but quite useful __time__ command - __GNU time__. This command is usually located under /usr/bin in most Linux distributions. Other than what shell built-in 'time' can show, GNU time prints more verbose system information like __CPU usage__, __page fault__, __context switch__ and etc.
 
 {% highlight bash %}
 #=> show GNU time version
@@ -33,7 +33,7 @@ real 169.08
 user 158.96
 sys 12.19
 
-#=> print verbose
+#=> print verbosely
 $ /usr/bin/time -v tar zcf linux-stable.tar.gz linux-stable
 	Command being timed: "tar zcf linux-stable.tar.gz linux-stable"
 	User time (seconds): 155.18
@@ -60,6 +60,6 @@ $ /usr/bin/time -v tar zcf linux-stable.tar.gz linux-stable
 	Exit status: 0
 {% endhighlight %}
 
-###references
+###References
 
 [1] [wikipedia:Time_Unix](http://en.wikipedia.org/wiki/Time_%28Unix%29)
