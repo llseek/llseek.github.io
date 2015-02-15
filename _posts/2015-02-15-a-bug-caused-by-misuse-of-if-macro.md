@@ -9,14 +9,15 @@ date: 2015-02-15
 To fully simplify my situation but also clearly show the key points, I use some dummy code to describe this bug.
 
 Considering that we want to let our code execute in following logic:
-* If macro FOO is defined, execute in path A
+
+* If FOO is defined, execute in path A
 * Else, execute in path B
 
 But to our surprise, when 'FOO' is 'not defined', program still executes in path A.
 
 ### Original code
 
-#### FOO is defined
+FOO is defined:
 {% highlight c %}
 #include <stdio.h>
 #include <stdlib.h>
@@ -35,13 +36,15 @@ int main(int argc, char **argv)
 }
 {% endhighlight %}
 
+Compile and Run:
+
 {% highlight bash %}
 $ gcc misuse_of_if_macro.c ; ./a.out
 I'm foo.
 #=> this is what we expect
 {% endhighlight %}
 
-#### FOO is not defined
+FOO is not defined:
 
 {% highlight c %}
 #include <stdio.h>
@@ -58,6 +61,8 @@ int main(int argc, char **argv)
 	return 0;
 }
 {% endhighlight %}
+
+Compile and Run:
 
 {% highlight bash %}
 $ gcc misuse_of_if_macro.c ; ./a.out
@@ -120,10 +125,10 @@ I'm not foo.
 
 According to [GCC document](https://gcc.gnu.org/onlinedocs/cpp/If.html) which describes #if macro:
 
-* The ‘#if’ directive allows you to test the value of an arithmetic expression, rather than the mere existence of one macro. Its syntax is:
+* The ‘#if’ directive allows you to test the value of an __arithmetic__ expression, rather than the mere existence of one macro. Its syntax is:
 
 {% highlight c %}
-#if expression      
+#if expression
 
 controlled text
 
@@ -140,9 +145,13 @@ controlled text
 
 In our situation, when 'FOO' is not defined, 'FOO' in '#if FOO == true' is treated as __0__. On the other hand, based on the last rule that the GCC document describes, 'true' is also treated by GCC preprocessor as __0__. Therefore, when 'FOO' is not defined, the program goes to the wrong branch.
 
+When we replace 'true' with '1', #if is now evaluating a arithmetic expression. So we can get what we want.
+
+__In summary, #if macro expects an arithmetic expression, in which a string like 'true' is not allowed.__
+
 ### Solution
 
-In this case, we just need to use __#ifdef__ macro since the value inside 'FOO' is not concerned at all.
+In this case, we just need to use __#ifdef__ instead of __#if__ since the value inside 'FOO' is not concerned at all.
 
 {% highlight c %}
 #include <stdio.h>
@@ -161,4 +170,4 @@ int main(int argc, char **argv)
 {% endhighlight %}
 
 ### References
-[1] [https://gcc.gnu.org/onlinedocs/cpp/If.html](https://gcc.gnu.org/onlinedocs/cpp/If.html)
+[1] <https://gcc.gnu.org/onlinedocs/cpp/If.html>
