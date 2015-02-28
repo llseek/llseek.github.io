@@ -1,7 +1,7 @@
 ---
 author: Xiaojie Yuan
 layout: post
-title: "A bug caused by misuse of #if macro"
+title: "[C] A Bug Caused by Misuse of '#if' Macro"
 date: 2015-02-15
 ---
 
