@@ -63,4 +63,4 @@ $ /usr/bin/time -v tar zcf linux-stable.tar.gz linux-stable
 
 ###References
 
-[1] [wikipedia:Time_Unix](http://en.wikipedia.org/wiki/Time_%28Unix%29)
+[1] <http://en.wikipedia.org/wiki/Time_%28Unix%29>

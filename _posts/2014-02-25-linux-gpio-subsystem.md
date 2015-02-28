@@ -187,6 +187,6 @@ $ ls /sys/class/gpio
 export    gpiochip0    gpiochip32    gpiochip64    gpiochip96    unexport
 ```
 
-# References
-[1] Documentations/gpio.txt under kernel source
-[2] https://github.com/CircuitCo/BeagleBone-Black/blob/master/BBB_SCH.pdf
+### References
+[1] <https://www.kernel.org/doc/Documentation/gpio/gpio.txt>   
+[2] <https://github.com/CircuitCo/BeagleBone-Black/blob/master/BBB_SCH.pdf>
