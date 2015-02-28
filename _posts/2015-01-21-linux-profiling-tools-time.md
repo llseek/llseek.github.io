@@ -10,19 +10,19 @@ We often use __time__ command to measure the executing time of a program. It wil
 
 However, our commonly used 'time' is just a shell (bash, zsh) built-in command (same kind as 'cd', 'pwd' and etc). In some use cases, information it delivers is too few to satisfy our needs.
 
-{% highlight bash %}
+```
 $ time tar zcf linux-stable.tar.gz linux-stable
  
 real	2m39.398s
 user	2m32.908s
 sys	0m11.556s
-{% endhighlight %}
+```
 
 ###GNU time
 
 Here, we will turn to another rarely used, but quite useful __time__ command - __GNU time__. This command is usually located under /usr/bin in most Linux distributions. Other than what shell built-in 'time' can show, GNU time prints more verbose system information like __CPU usage__, __page fault__, __context switch__ and etc.
 
-{% highlight bash %}
+```
 #=> show GNU time version
 $ /usr/bin/time --version
 GNU time 1.7
@@ -58,7 +58,7 @@ $ /usr/bin/time -v tar zcf linux-stable.tar.gz linux-stable
 	Signals delivered: 0
 	Page size (bytes): 4096
 	Exit status: 0
-{% endhighlight %}
+```
 
 ###References
 

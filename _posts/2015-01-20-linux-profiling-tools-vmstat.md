@@ -6,7 +6,7 @@ date: 2015-01-20
 
 ### Run vmstat
 
-{% highlight bash %}
+```
 #=> update every 1 second
 $ vmstat 1
 procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
@@ -16,8 +16,7 @@ procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
  15  0   2852 46685952 279456 1401196    0    0     0    56 2150 36905 54 35 11  0
  15  0   2852 46685960 279456 1401196    0    0     0     0 2173 36645 54 33 13  0
 <snip>
-{% endhighlight %}
-
+```
 
 ### Meaning of each field
 
@@ -49,4 +48,3 @@ command)
 * _sy_ - time spent running kernel code (%)
 * _id_ - time spent idle (%)
 * _wa_ - time spent waiting for IO (%)
-

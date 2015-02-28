@@ -18,7 +18,8 @@ But to our surprise, when 'FOO' is 'not defined', program still executes in path
 ### Original code
 
 FOO is defined:
-{% highlight c %}
+
+```c
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -34,19 +35,19 @@ int main(int argc, char **argv)
 
 	return 0;
 }
-{% endhighlight %}
+```
 
 Compile and Run:
 
-{% highlight bash %}
+```
 $ gcc misuse_of_if_macro.c ; ./a.out
 I'm foo.
 #=> this is what we expect
-{% endhighlight %}
+```
 
 FOO is not defined:
 
-{% highlight c %}
+```c
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -60,20 +61,21 @@ int main(int argc, char **argv)
 
 	return 0;
 }
-{% endhighlight %}
+```
 
 Compile and Run:
 
-{% highlight bash %}
+```
 $ gcc misuse_of_if_macro.c ; ./a.out
 I'm foo.
 #=> this is not what we expect
-{% endhighlight %}
+```
 
 ### Replace 'true' with '1'
 
 #### FOO is defined
-{% highlight c %}
+
+```c
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -89,17 +91,17 @@ int main(int argc, char **argv)
 
 	return 0;
 }
-{% endhighlight %}
+```
 
-{% highlight bash %}
+```
 $ gcc misuse_of_if_macro.c ; ./a.out
 I'm foo.
 #=> this is what we expect
-{% endhighlight %}
+```
 
 #### FOO is not defined
 
-{% highlight c %}
+```c
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -113,13 +115,13 @@ int main(int argc, char **argv)
 
 	return 0;
 }
-{% endhighlight %}
+```
 
-{% highlight bash %}
+```
 $ gcc misuse_of_if_macro.c ; ./a.out
 I'm not foo.
 #=> this is what we expect
-{% endhighlight %}
+```
 
 ### Cause of bug
 
@@ -127,13 +129,13 @@ According to [GCC document](https://gcc.gnu.org/onlinedocs/cpp/If.html) which de
 
 * The ‘#if’ directive allows you to test the value of an __arithmetic__ expression, rather than the mere existence of one macro. Its syntax is:
 
-{% highlight c %}
+```c
 #if expression
 
 controlled text
 
 #endif /* expression */
-{% endhighlight %}
+```
 
 * _expression_ is a C expression of integer type, subject to stringent restrictions. It may contain:
   * Integer constants.
@@ -153,7 +155,7 @@ __In summary, #if macro expects an arithmetic expression, in which a string like
 
 In this case, we just need to use __#ifdef__ instead of __#if__ since the value inside 'FOO' is not concerned at all.
 
-{% highlight c %}
+```c
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -167,7 +169,7 @@ int main(int argc, char **argv)
 
 	return 0;
 }
-{% endhighlight %}
+```
 
 ### References
 [1] <https://gcc.gnu.org/onlinedocs/cpp/If.html>

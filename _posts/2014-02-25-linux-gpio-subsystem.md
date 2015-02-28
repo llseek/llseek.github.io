@@ -6,7 +6,7 @@ date: 2014-02-25
 
 ### Kernel GPIO Interface
 
-{% highlight c %}
+```c
 bool gpio_is_valid(int number);
  int gpio_request(unsigned gpio, const char *label);
 void gpio_free(unsigned gpio);
@@ -17,13 +17,13 @@ void gpio_set_value(unsigned gpio, int value);
  int gpio_export(unsigned gpio, bool direction_may_change);
 void gpio_unexport(unsigned gpio);
  int gpio_to_irq(unsigned gpio);
-{% endhighlight %}
+```
 
 ### Test Code
 
 * gpio.c
 
-{% highlight c %}
+```c
 /*
  * test module for kernel gpio subsystem
  * module functions:
@@ -155,11 +155,11 @@ module_exit(gpio_exit);
 
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Xiaojie Yuan <yxj0207@gmail.com>");
-{% endhighlight %}
+```
 
 * Makefile
 
-{% highlight makefile %}
+```makefile
 obj-m += gpio.o
 KERNELDIR := /usr/src/kernel
 PWD := $(shell pwd)
@@ -168,10 +168,10 @@ all:
 	make -C $(KERNELDIR) M=$(PWD) ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- modules
 clean:
 	make -C $(KERNELDIR) M=$(PWD) ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- clean
-{% endhighlight %}
+```
 
 ### Run Module
-{% highlight bash %}
+```
 $ insmod gpio.ko
 [  987.757562] value of gpio1[28] is 0
 [  987.761259] irq of gpio1[28] is 204
@@ -184,7 +184,7 @@ $ rmmod gpio.ko
 [ 1191.805627] gpio.ko: exit ok
 $ ls /sys/class/gpio
 export    gpiochip0    gpiochip32    gpiochip64    gpiochip96    unexport
-{% endhighlight %}
+```
 
 # References
 [1] Documentations/gpio.txt under kernel source
