@@ -1,7 +1,8 @@
 ---
+author: Xiaojie Yuan
 layout:	post
-title:	" Linux Profiling Tools - time"
-date:	2015-01-21
+title: " Linux Profiling Tools - time"
+date: 2015-01-21
 ---
 
 ###Shell built-in time

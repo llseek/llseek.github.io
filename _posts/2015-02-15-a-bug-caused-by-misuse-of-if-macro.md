@@ -1,4 +1,5 @@
 ---
+author: Xiaojie Yuan
 layout: post
 title: "A bug caused by misuse of #if macro"
 date: 2015-02-15
