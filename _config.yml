@@ -8,3 +8,9 @@ github_username: llseek
 
 # Build settings
 markdown: redcarpet
+
+# Analytics settings
+analytics:
+  provider: google
+  google:
+    tracking_id: 'UA-60893867-1'
