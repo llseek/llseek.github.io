@@ -10,6 +10,6 @@ As a kernel noob, I like to do some kernel experiments in my spare time. The har
 
 Recently, I am learning [Objective-C](http://en.wikipedia.org/wiki/Objective-C) and [Cocoa Touch](http://en.wikipedia.org/wiki/Cocoa_Touch) in order to develop games on the iOS platform. Therefore, some articles with the [Objective-C] tag will be posted from now on.
 
-This site is hosted on github and redirected to [llseek.github.io](https://llseek.github.io).
+This site was originally hosted on github and redirected to [llseek.github.io](https://llseek.github.io), but I have migrated it to a VPS provided by Digital Ocean since June 18, 2015.
 
 For the legacy wordpress verion blog, please refer [wp.llseek.com](http://wp.llseek.com).
