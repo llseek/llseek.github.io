@@ -160,5 +160,7 @@ a
 
 ### References
 [1] <http://stackoverflow.com/questions/16522858/understanding-of-pthread-cond-wait-and-pthread-cond-signal>  
-[2] <http://linux.die.net/man/3/pthread_cond_wait>
-
+[2] <http://linux.die.net/man/3/pthread_cond_wait>  
+[3] <http://www.ibm.com/developerworks/library/l-posix1>  
+[4] <http://www.ibm.com/developerworks/library/l-posix2>  
+[5] <http://www.ibm.com/developerworks/library/l-posix3>
