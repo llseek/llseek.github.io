@@ -17,8 +17,14 @@ date: yyyy-mm-dd
 
 ### Section 2
 
-```lang
-codes written by $lang
+```c
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+	printf("Hello World!\n");
+	return 0;
+}
 ```
 
 ### Section 3
