@@ -4,12 +4,12 @@ title: About Me
 permalink: /about/
 ---
 
-My name is Xiaojie Yuan. I was major in ECE at SJTU and graduated in 2013 with Bechelor degree. Currently, I am working as a Kernel Engineer in Sony (China) Co., Ltd.
+Thanks for visiting my blog and welcome! : )
 
-As a kernel noob, I like to do some kernel experiments in my spare time. The hardware platform I use is the [Beaglebone Black](http://beagleboard.org/) produced by TI who also provides a Linux-3.12 kernel within the AM335X SDK.
+My name is Xiaojie Yuan. I was major in ECE at SJTU and graduated in 2013 with a Bechelor degree. Currently, I am working as a Kernel Engineer in Sony (China) Co., Ltd. My daily work includes but is not limited to bug fixes and patch porting for Linux kernel / driver, design and development for sensor middleware and so on.
 
-Recently, I am learning [Objective-C](http://en.wikipedia.org/wiki/Objective-C) and [Cocoa Touch](http://en.wikipedia.org/wiki/Cocoa_Touch) in order to develop games on the iOS platform. Therefore, some articles with the [Objective-C] tag will be posted from now on.
+As a kernel noob, in my spare time, I like playing with my [Beaglebone Black](http://beagleboard.org/) board which is driven by TI's AM3359 SoC.
 
-This site was originally hosted on github and redirected to [llseek.github.io](https://llseek.github.io), but I have migrated it to a VPS provided by Digital Ocean since June 18, 2015.
+This site was originally hosted on github and redirected to [llseek.github.io](https://llseek.github.io), but in order to gain more flexibility, I have migrated it to Digital Ocean's VPS since June 18, 2015. :)
 
 For the legacy wordpress verion blog, please refer [wp.llseek.com](http://wp.llseek.com).
