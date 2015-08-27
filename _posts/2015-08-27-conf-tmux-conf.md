@@ -5,7 +5,7 @@ title: "[Conf] .tmux.conf"
 date: 2015-08-27
 ---
 
-```
+```apache
 # reload config file
 bind r source-file ~/.tmux.conf; display 'config reloaded'
 
