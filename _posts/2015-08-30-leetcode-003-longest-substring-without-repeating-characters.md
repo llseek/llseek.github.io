@@ -9,20 +9,15 @@ date: 2015-08-30
 int lengthOfLongestSubstring(char* s)
 {
         int N = strlen(s);
-        int beg, end, candidate;
-        int pos = -1;
+        int beg = 0;
+        int end = 0;
+        int candidate = 0;
         char c;
         int i, j;
 
-        if (N < 2)
-                return N;
+        if (N == 0)
+                return 0;
 
-        /* for s[0] */
-        beg = 0;
-        end = 0;
-        candidate = 0;
-
-        /* for s[i] (i >= 1) */
         for (i = 1; i < N; i++) {
                 c = s[i];
                 for (j = candidate; j <= i - 1; j++) {
@@ -31,7 +26,6 @@ int lengthOfLongestSubstring(char* s)
                                 break;
                         }
                 }
-
                 if (i - candidate > end - beg) {
                         beg = candidate;
                         end = i;
