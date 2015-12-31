@@ -6,6 +6,15 @@ date: 2015-08-30
 ---
 
 ```c
+/*
+ * 1. within range [0, i], [beg, end] is the longest substring, and
+ *    [candidate, i] is the possible longer substring.
+ * 2. extend range to [0, i + 1], if s[i + 1] can be combined with
+ *    [candidate, i] AND if [candidate, i + 1] is longer than [beg, end],
+ *    update [beg, end].
+ * 3. extend range until [0, strlen(s) - 1], the final [beg, end] is the
+ *    longest substring without repeating characters.
+ */
 int lengthOfLongestSubstring(char* s)
 {
         int N = strlen(s);
