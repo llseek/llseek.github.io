@@ -19,29 +19,28 @@ bind r source-file ~/.tmux.conf; display 'config reloaded'
 # list current bind keys
 bind ? list-keys
 
-# detach
+# detach client
 bind d detach-client
+
+# switch client
+bind p switch-client -p
+bind n switch-client -n
 
 # switch between sessions
 bind c choose-session
 
-# kill a session
-bind k kill-session
+# kill a pane
+bind-key x confirm-before -p "kill-pane #P? (y/n)" kill-pane
 
 # split windows like vim
-# vim's definition of a horizontal/vertical split is reversed from tmux's
-bind s split-window -v
-bind v split-window -h
+bind s split-window -v -c "#{pane_current_path}"
+bind v split-window -h -c "#{pane_current_path}"
 
-# move around panes with hjkl, as one would in vim after pressing ctrl-w
-#bind h select-pane -L
-#bind j select-pane -D
-#bind k select-pane -U
-#bind l select-pane -R
+# swap pane
+bind-key { swap-pane -U
+bind-key } swap-pane -D
 
 # resize panes like vim
-# feel free to change the "1" to however many lines you want to resize by, only
-# one at a time can be slow
 bind h resize-pane -L 5
 bind l resize-pane -R 5
 bind j resize-pane -D 5
@@ -54,6 +53,9 @@ bind z resize-pane -Z
 bind [ copy-mode
 # vi-style controls for copy mode
 setw -g mode-keys vi
+bind C-p paste-buffer
+bind-key -t vi-copy 'v' begin-selection
+bind-key -t vi-copy 'y' copy-selection
 
 # smart pane switching with awareness of vim splits
 is_vim='echo "#{pane_current_command}" | grep -iqE "(^|\/)g?(view|n?vim?)(diff)?$"'
