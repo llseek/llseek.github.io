@@ -16,6 +16,7 @@ call vundle#begin()
 " let Vundle manage Vundle
 Plugin 'gmarik/Vundle.vim'
 " plugin from http://vim-scripts.org/vim/scripts.html
+Plugin 'a.vim'
 Plugin 'taglist.vim'
 Plugin 'gtags.vim'
 " plugin from github repo
@@ -23,8 +24,28 @@ Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'scrooloose/syntastic'
+
+" default snippets (under .vim/bundle/vim-snippets/)
+"   contents:
+"   - snippets/*: snippets using snipMate format
+"   - UltiSnips/*: snippets using UltiSnips format
+Plugin 'honza/vim-snippets'
+" snippet engine(python), supports all snippets in above repo
+"Plugin 'SirVer/ultisnips'
+" snippet engine(VimL), supports snippets/*
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+
+Plugin 'kien/ctrlp.vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'vim-scripts/ScrollColors'
+
 " iOS development specific
-"Plugin 'msanders/snipmate.vim'
 "Plugin 'Rip-Rip/clang_complete'
 "Plugin 'guns/ultisnips'
 "Plugin 'terhechte/syntastic'
@@ -33,7 +54,7 @@ Plugin 'bling/vim-airline'
 call vundle#end()
 
 " === General Options ===
-let mapleader=" "
+"let mapleader=" "
 syntax on
 set encoding=utf-8
 set fileencodings=utf-8
@@ -45,6 +66,7 @@ set hlsearch
 set incsearch
 set t_Co=256
 set laststatus=2
+set colorcolumn=81
 colorscheme default
 hi Search cterm=underline ctermfg=yellow ctermbg=none
 hi Visual cterm=underline ctermfg=yellow ctermbg=none
@@ -71,11 +93,18 @@ nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zC' : 'zO')<CR>
 "    au! BufReadPost,BufWritePost * silent loadview
 "endif
 
+" === Split Options ===
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+set splitbelow
+set splitright
+
 " === Gtags Options ===
 map <C-n> :cn<CR>
 map <C-p> :cp<CR>
 map <C-\> :GtagsCursor<CR>
-map <C-l> q:k<CR>
 
 " === Taglist Options ===
 map <F9> :TlistToggle<CR>
@@ -88,7 +117,7 @@ let Tlist_File_Fold_Auto_Close=1
 let Tlist_Enable_Fold_Colum=1
 
 " === Airline Options ===
-let g:airline_theme='dark'
+let g:airline_theme='papercolor'
 let g:airline#extensions#whitespace#mixed_indent_algo=1
 
 " === Mouse Options ===
@@ -140,18 +169,40 @@ if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
+if has("autocmd")
+    au FileType python setlocal shiftwidth=4 tabstop=4
+endif
+
+"if has("autocmd")
+    " delete trailing whitespaces
+"    autocmd BufWritePre *.[c|h] :%s/\s\+$//e
+"endif
+
 " === Misc Options ===
 " Open files in the same directory as the current file
 map ,e :e <C-R>=expand("%:h") . "/" <CR>
 map ,t :tabe <C-R>=expand("%:h") . "/" <CR>
 map ,s :split <C-R>=expand("%:h") . "/" <CR>
 map ,v :vsplit <C-R>=expand("%:h") . "/" <CR>
-" Map 'jj' to Escape key
-inoremap jj <ESC>
+" map Escape key to jj
+inoremap jj <ESC>:w<CR>
 
-" === Resize Options ===
-nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) - 5)<CR>
-nnoremap <silent> <Leader>= :exe "resize " . (winheight(0) + 5)<CR>
-nnoremap <silent> <Leader>9 :exe "vertical resize " . (winwidth(0) - 5)<CR>
-nnoremap <silent> <Leader>0 :exe "vertical resize " . (winwidth(0) + 5)<CR>
+" === Leader Options ===
+"nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) - 5)<CR>
+"nnoremap <silent> <Leader>= :exe "resize " . (winheight(0) + 5)<CR>
+"nnoremap <silent> <Leader>9 :exe "vertical resize " . (winwidth(0) - 5)<CR>
+"nnoremap <silent> <Leader>0 :exe "vertical resize " . (winwidth(0) + 5)<CR>
+
+" === Vim Tmux Navigator Options ===
+let g:tmux_navigator_no_mappings = 1
+nnoremap <silent> <C-h> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-j> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-k> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-l> :TmuxNavigateRight<cr>
+let g:tmux_navigator_save_on_switch = 1
+
+" === CtrlP Options ===
+let g:ctrlp_map = '<c-f>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
 ```
