@@ -1,6 +1,7 @@
 ---
 author: Xiaojie Yuan
 layout: post
+category: leetcode
 title: "[LeetCode][007] Reverse Integer"
 date: 2015-09-18
 ---

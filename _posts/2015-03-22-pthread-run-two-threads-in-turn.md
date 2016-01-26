@@ -1,6 +1,7 @@
 ---
 author: Xiaojie Yuan
 layout: post
+category: pthread
 title: "[Pthread] Run Two Threads in Turn"
 date: 2015-03-22
 ---

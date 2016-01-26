@@ -1,6 +1,7 @@
 ---
 author: Xiaojie Yuan
 layout: post
+category: leetcode
 title: "[LeetCode][125] Valid Palindrome"
 date: 2016-01-25
 ---

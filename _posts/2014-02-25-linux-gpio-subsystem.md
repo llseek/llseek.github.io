@@ -1,6 +1,7 @@
 ---
 author: Xiaojie Yuan
 layout: post
+category: kernel
 title: "[Kernel] Linux GPIO Subsystem"
 date: 2014-02-25
 ---

@@ -1,6 +1,7 @@
 ---
 author: Xiaojie Yuan
 layout: post
+category: leetcode
 title: "[LeetCode][199] Binary Tree Right Side View"
 date: 2016-01-25
 ---

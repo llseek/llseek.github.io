@@ -1,6 +1,7 @@
 ---
 author: Xiaojie Yuan
 layout: post
+category: perf
 title: "[Performance] Linux Profiling Tools - vmstat"
 date: 2015-01-20
 ---

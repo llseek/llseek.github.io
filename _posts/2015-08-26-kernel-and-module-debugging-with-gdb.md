@@ -1,6 +1,7 @@
 ---
 author: Xiaojie Yuan
 layout: post
+category: kernel
 title: "[Kernel] Kernel and module debugging with gdb"
 date: 2015-08-26
 ---

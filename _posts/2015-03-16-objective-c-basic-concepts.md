@@ -1,6 +1,7 @@
 ---
 author: Xiaojie Yuan
 layout: post
+category: obj-c
 title: "[Objective-C] Basic Concepts"
 date: 2015-03-16
 ---

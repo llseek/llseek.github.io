@@ -1,6 +1,7 @@
 ---
 author: Xiaojie Yuan
 layout: post
+category: kernel
 title: "[Linux] Module.symvers"
 date: 2015-08-08
 ---

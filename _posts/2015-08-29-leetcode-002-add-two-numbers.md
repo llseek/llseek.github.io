@@ -1,6 +1,7 @@
 ---
 author: Xiaojie Yuan
 layout: post
+category: leetcode
 title: "[LeetCode][002] Add Two Numbers"
 date: 2015-08-29
 ---

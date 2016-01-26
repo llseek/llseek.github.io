@@ -1,6 +1,7 @@
 ---
 author: Xiaojie Yuan
 layout: post
+category: leetcode
 title: "[LeetCode][001] Two Sum"
 date: 2015-08-29
 ---

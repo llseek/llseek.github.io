@@ -1,6 +1,7 @@
 ---
 author: Xiaojie Yuan
 layout: post
+category: c
 title: "[C] A Bug Caused by Misuse of '#if' Macro"
 date: 2015-02-15
 ---

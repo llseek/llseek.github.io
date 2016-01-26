@@ -1,6 +1,7 @@
 ---
 author: Xiaojie Yuan
 layout: post
+category: config
 title: "[Conf] .vimrc"
 date: 2015-03-18
 ---

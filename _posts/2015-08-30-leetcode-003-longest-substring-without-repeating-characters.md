@@ -1,6 +1,7 @@
 ---
 author: Xiaojie Yuan
 layout: post
+category: leetcode
 title: "[LeetCode][003] Longest Substring Without Repeating Characters"
 date: 2015-08-30
 ---

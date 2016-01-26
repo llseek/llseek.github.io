@@ -1,6 +1,7 @@
 ---
 author: Xiaojie Yuan
 layout: post
+category: leetcode
 title: "[LeetCode][006] Zigzag Conversion"
 date: 2015-09-17
 ---
