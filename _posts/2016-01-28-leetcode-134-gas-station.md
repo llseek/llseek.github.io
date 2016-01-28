@@ -10,14 +10,13 @@ __Python__
 
 ```python
 class Solution(object):
-    def __canCompleteCircuit(self, diff, starting_idx):
-        length = len(diff)
-        wrap_around_list = range(starting_idx, len(diff)) + range(0, starting_idx)
+    def __canCompleteCircuit(self, remains, start):
+        l = remains[start:] + remains[:start]
+        tank = 0
 
-        total = 0
-        for i in wrap_around_list:
-            total += diff[i]
-            if total < 0:
+        for val in l:
+            tank += val
+            if tank < 0:
                 return False
         return True
 
@@ -27,15 +26,15 @@ class Solution(object):
         :type cost: List[int]
         :rtype: int
         """
-        diff = map(lambda a, b : a - b, gas, cost)
+        remains = map(lambda a, b : a - b, gas, cost)
 
-        # sort by diff value
-        check_list = map(lambda x : x[0],
-                sorted(enumerate(diff), key=lambda x : x[1], reverse=True))
+        # sort by remain value in descending order
+        start_points = map(lambda x : x[0],
+                sorted(enumerate(remains), key=lambda x : x[1], reverse=True))
 
-        # try each starting point (from the largest to the smallest)
-        for i in check_list:
-            if self.__canCompleteCircuit(diff, i):
+        # try each start point
+        for i in start_points:
+            if self.__canCompleteCircuit(remains, i):
                 return i
 
         return -1
