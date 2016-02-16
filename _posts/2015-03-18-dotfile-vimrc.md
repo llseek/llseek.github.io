@@ -1,8 +1,8 @@
 ---
 author: Xiaojie Yuan
 layout: post
-category: config
-title: "[Conf] .vimrc"
+category: dotfile
+title: "[Dotfile] .vimrc"
 date: 2015-03-18
 ---
 

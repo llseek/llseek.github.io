@@ -1,8 +1,8 @@
 ---
 author: Xiaojie Yuan
 layout: post
-category: config
-title: "[Conf] .tmux.conf"
+category: dotfile
+title: "[Dotfile] .tmux.conf"
 date: 2015-08-27
 ---
 
