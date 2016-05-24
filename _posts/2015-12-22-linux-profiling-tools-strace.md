@@ -27,6 +27,19 @@ unlink("/tmp/cc48vBzx.s")               = 0
 exit_group(0)                           = ?
 ```
 
+### Attach to a process
+
+> -p [PID]
+
+> Attach to a running process
+
+```
+$ sudo strace -p $(pidof sshd)
+Process 883 attached - interrupt to quit
+select(7, [3 4], NULL, NULL, NULL^C <unfinished ...>
+Process 883 detached
+```
+
 ### Trace child processes
 
 > -f
