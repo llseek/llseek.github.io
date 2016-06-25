@@ -30,7 +30,7 @@ In Shanghai, it only takes about __20min__ to download the bundle.
 
         $ cd linux
         $ git remote remove origin
-        $ git remote add origin https://git.kernel.org/pub/scm/linux/kernel/git/torvalds
+        $ git remote add origin https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
         $ git pull origin master
 
 Now, everything is done.
