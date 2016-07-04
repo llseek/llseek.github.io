@@ -8,21 +8,21 @@ date: 2016-07-04
 
 ### Registers
 
-1. r0 ~ r7: general registers
-2. r8 ~ r12: banked registers (in fiq mode)
-3. r13: sp, stack pointer register
-4. r14: lr, link register
-5. r15: pc, program counter register
+1. __r0 ~ r7__: general registers
+2. __r8 ~ r12__: banked registers (in fiq mode)
+3. __r13 / sp__: stack pointer register
+4. __r14 / lr__: link register
+5. __r15 / pc__: program counter register
 
 ### CPU modes
 
-1. (usr) user mode
-2. (sys) system mode
-3. (svc) supervisor mode
-4. (abt) abort mode
-5. (und) undefined mode
-6. (irq) interrupt mode
-7. (fiq) fast interrupt mode
+1. __(usr)__ user mode
+2. __(sys)__ system mode
+3. __(svc)__ supervisor mode
+4. __(abt)__ abort mode
+5. __(und)__ undefined mode
+6. __(irq)__ interrupt mode
+7. __(fiq)__ fast interrupt mode
 
 ### Registers across CPU modes
 
