@@ -3,7 +3,7 @@ title: Oops!
 email: yxj0207@gmail.com
 description: Just another kernel noob's blog.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://llseek.com"
+url: "http://llseek.github.io"
 github_username: llseek
 
 # Build settings
