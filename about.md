@@ -6,8 +6,8 @@ permalink: /about/
 
 Thanks for visiting my blog and welcome : )
 
-My name is Xiaojie Yuan. I was major in ECE at SJTU and graduated in 2013 with a Bechelor degree. Currently, I am working as a Kernel Engineer in Sony (China) Co., Ltd. My daily work includes but is not limited to bug fixes and patch porting for Linux kernel / driver, design and development for sensor middleware and so on.
+My name is Xiaojie Yuan. I studied at Shanghai Jiao University and graduated in 2013 with a Bechelor degree in Electrical and Computer Engineering. Currently, I am working as a Linux Driver Engineer in AMD (Shanghai) Co., Ltd. My daily work includes but is not limited to bring up for new generation of GPUs, bug-fix for AMDGPU software stack, and maintenance for Jenkins automation system.
 
-This site was originally hosted on github and redirected to [llseek.github.io](https://llseek.github.io), but in order to gain more flexibility, I have migrated it to Digital Ocean's VPS since June 18, 2015.
+My Github: [llseek](https://github.com/llseek)
 
-For the legacy wordpress verion blog, please refer [wp.llseek.com](http://wp.llseek.com).
+My Resume: [In English](https://github.com/llseek/resume/blob/master/en/resume_en.pdf) and [In Chinese](https://github.com/llseek/resume/blob/master/ch/resume_ch.pdf)
