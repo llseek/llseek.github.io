@@ -6,7 +6,7 @@ permalink: /about/
 
 Thanks for visiting my blog and welcome : )
 
-My name is Xiaojie Yuan. I studied at Shanghai Jiao University and graduated in 2013 with a Bechelor degree in Electrical and Computer Engineering. Currently, I am working as a Linux Driver Engineer in AMD (Shanghai) Co., Ltd. My daily work includes but is not limited to bring up for new generation of GPUs, bug-fix for AMDGPU software stack, and maintenance for Jenkins automation system.
+This is Xiaojie who graduated with a Bechelor degree in ECE from Shanghai Jiaotong University in 2013 and is now working as a Linux Driver Engineer in AMD Shanghai. My daily work includes but is not limited to bring-up for next generation of GPU, bug-fix for AMDGPU software stack, and maintenance for CI/CD system.
 
 My Github: [llseek](https://github.com/llseek)
 
