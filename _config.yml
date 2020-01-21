@@ -14,3 +14,6 @@ analytics:
   provider: google
   google:
     tracking_id: 'UA-60893867-1'
+
+# Category generator
+category_title_prefix: ''
