@@ -7,7 +7,7 @@ url: "http://llseek.github.io"
 github_username: llseek
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 
 # Analytics settings
 analytics:
